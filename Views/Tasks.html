@@ -12,16 +12,20 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/task.css">
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+  <!-- ################### NavBar ####################### -->
+<nav id="my-navbar" class="my-nav navbar navbar-inverse navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="Tasks.html"><i class="Favicon.ico"></i>Quikr Task Manager</a>
+      <a class="navbar-brand" href="Tasks.html">
+         Quikr Taskrrrrr
+      </a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a class="nav-link" href="Tasks.html">Your Tasks</a></li>
+      <li><a class="nav-link" href="Tasks.html">Your Tasks</a></li>
       <li><a class="nav-link" href="KRA.html">Your KRAs</a></li>
       <li><a class="nav-link" href="Feedbacks.html">Give Feedback</a></li>
       <li><a class="nav-link" href="Manager.html">Manager View</a></li>
@@ -33,74 +37,43 @@
 
   <div class="jumbotron">
     <div class="page-header">
-      <legend><h3>Add your tasks</h3></legend>
-      <p class="well well-sm">Add your weekly tasks here. At end of apprisal cycle publisg the major tasks, so that your coworkers can give feedback about your performance. It will be easy to fillup your performance evaluation form this way.</p> 
+      <legend><h3>NON CTC Reimbursement</h3></legend>
+      <p class="well well-sm">
+        Add your weekly tasks here. At end of apprisal cycle publisg the major tasks, so that your coworkers can give feedback about your performance. It will be easy to fillup your performance evaluation form this way.</p> 
     </div>
   </div>
 
 <form class="publish-form">
 <table cellpadding="0" cellspacing="0" border="0" class="table display" id="example" width="100%">
   <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Spec</th>
-      <th>Description</th>
-      <th>Coworkers</th>
-      <th>Major Task</th>
-      <th>KRA</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-    </tr>
-  </thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Spec</th>
+        <th>Description</th>
+        <th>Coworkers</th>
+        <th>Major Task</th>
+        <th>KRA</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+   </thead>
   <tbody>
     <tr>
-      <td class="clearfix">
-        <input type="checkbox" name="task" id="task-1" value="task-1">
-        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
-          <span class="glyphicon glyphicon-edit"></span> Edit
-        </a>
-      </td>
-      <td>Create a new tab for my order services</td>
-      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
-      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
-      <td>anil.jain@quikr.com, kunal.rao@quikr.com</td>
-      <td>Yes</th>
-      <td>Learning new Technology</td>
-      <td>11/06/2018</td>
-      <td>19/06/2018</td>
-    </tr>
-    <tr>
-      <td>
-        <input type="checkbox" name="task" id="task-2" value="task-2">
-        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
-          <span class="glyphicon glyphicon-edit"></span> Edit
-        </a>
-      </td>
-      <td>Create a new tab for my order services</td>
-      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
-      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
-      <td>anil.jain@quikr.com</td>
-      <td>Yes</td>
-      <td>No bugs in Production.</td>
-      <td>11/06/2018</td>
-      <td>19/06/2018</td>
-    </tr>
-    <tr>
-      <td>
-        <input type="checkbox" name="task" id="task-3" value="task-3">
-        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
-          <span class="glyphicon glyphicon-edit"></span> Edit
-        </a>
-      </td>
-      <td>Create a new tab for my order services</td>
-      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
-      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
-      <td>anil.jain@quikr.com, kunal.rao@quikr.com</td>
-      <td>Yes</td>
-      <td>Learning new Technology</td>
-      <td>11/06/2018</td>
-      <td>19/06/2018</td>
+        <td class="clearfix">
+          <input type="checkbox" name="task" id="task-1" value="task-1">
+          <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </td>
+        <td>Create a new tab for my order services</td>
+        <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
+        <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
+        <td>anil.jain@quikr.com, kunal.rao@quikr.com</td>
+        <td>Yes</th>
+        <td>Learning new Technology</td>
+        <td>11/06/2018</td>
+        <td>19/06/2018</td>
     </tr>
   </tbody>
 </table>
