@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> Tasks</title>
+<link rel="icon" href="http://blog.quikr.com/wp-content/uploads/2015/09/Favicon.ico" > 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/moment-2.18.1/dt-1.10.16/b-1.5.1/sl-1.2.5/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Tasks.html"><i class="Favicon.ico"></i>Quikr Task Manager</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a class="nav-link" href="Tasks.html">Your Tasks</a></li>
+      <li><a class="nav-link" href="KRA.html">Your KRAs</a></li>
+      <li><a class="nav-link" href="Feedbacks.html">Give Feedback</a></li>
+      <li><a class="nav-link" href="Manager.html">Manager View</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="jumbotron">
+    <div class="page-header">
+      <legend><h3>Add your tasks</h3></legend>
+      <p class="well well-sm">Add your weekly tasks here. At end of apprisal cycle publisg the major tasks, so that your coworkers can give feedback about your performance. It will be easy to fillup your performance evaluation form this way.</p> 
+    </div>
+  </div>
+
+<form class="publish-form">
+<table cellpadding="0" cellspacing="0" border="0" class="table display" id="example" width="100%">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Spec</th>
+      <th>Description</th>
+      <th>Coworkers</th>
+      <th>Major Task</th>
+      <th>KRA</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="clearfix">
+        <input type="checkbox" name="task" id="task-1" value="task-1">
+        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </a>
+      </td>
+      <td>Create a new tab for my order services</td>
+      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
+      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
+      <td>anil.jain@quikr.com, kunal.rao@quikr.com</td>
+      <td>Yes</th>
+      <td>Learning new Technology</td>
+      <td>11/06/2018</td>
+      <td>19/06/2018</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="task" id="task-2" value="task-2">
+        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </a>
+      </td>
+      <td>Create a new tab for my order services</td>
+      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
+      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
+      <td>anil.jain@quikr.com</td>
+      <td>Yes</td>
+      <td>No bugs in Production.</td>
+      <td>11/06/2018</td>
+      <td>19/06/2018</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="task" id="task-3" value="task-3">
+        <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </a>
+      </td>
+      <td>Create a new tab for my order services</td>
+      <td><a href="https://quikrjira.quikrcorp.com/browse/QKR-123">QKR-123</a></td>
+      <td>I have done the PHP code for this. This went live without any major QA issues found.</td>
+      <td>anil.jain@quikr.com, kunal.rao@quikr.com</td>
+      <td>Yes</td>
+      <td>Learning new Technology</td>
+      <td>11/06/2018</td>
+      <td>19/06/2018</td>
+    </tr>
+  </tbody>
+</table>
+<button id="publish" name="publish" class="btn btn-danger">Publish</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Task</button>
+</form>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add a task</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+        <fieldset>
+
+	<!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="title">Title</label>  
+          <div class="col-md-5">
+          <input id="title" name="title" type="text" placeholder="Describe the task" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+        <!-- Prepended text-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jira">Spec/Jira/Idea Links</label>
+          <div class="col-md-5">
+            <input id="jira" name="jira" class="form-control" placeholder="QKR-123" type="text">
+
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="description">Description</label>
+          <div class="col-md-5">                     
+            <textarea class="form-control" id="description" name="description">Description</textarea>
+          </div>
+        </div>
+
+        <!-- Appended Input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="coworker">Add coworker</label>
+          <div class="col-md-5">
+              <select id="coworker" name="coworker" class="select-tags form-control" multiple="multiple" placeholder="amit.roy@quikr.com" style="width: 300px;"></select>
+          </div>
+        </div>
+        <!-- Checkboxes (inline) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="majortask">Is Major Task</label>
+          <div class="col-md-4">
+            <label class="checkbox-inline" for="majortask-0">
+              <input type="checkbox" name="majortask" id="majortask-0" value="major">
+              major
+            </label>
+          </div>
+        </div>
+
+        <!-- Text date-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Start Date">Start Date</label>  
+          <div class="col-md-4">
+          <input id="Start Date" name="Start Date" type="date" placeholder="11/06/2018" class="form-control input-md date">
+    
+          </div>
+        </div>
+
+        <!-- Text date-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="End Date">End Date</label>  
+          <div class="col-md-4">
+          <input id="End Date" name="End Date" type="date" placeholder="19/06/2018" class="form-control input-md">
+    
+          </div>
+        </div>
+
+        <!-- Select Options-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="kra">Align to KRA:</label>
+          <div class="col-md-5">
+              <select id="kra" name="coworker" class="form-control">
+                 <option value="" selected disabled>Select KRA</option>
+                 <option>Learn New Technology</option>
+                 <option>No production bug in code</option>
+                 <option>Estimate properly and deliver within estimate</option>
+              </select>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+
+<footer class="page-footer font-small blue pt-4 mt-4">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/v/dt/jqc-1.12.3/moment-2.18.1/dt-1.10.16/b-1.5.1/sl-1.2.5/datatables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/table.1ed55936-5828-11e8-b997-002590dcfa5d.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+
+  $('#example')
+    .removeClass( 'display' )
+    .addClass('table table-striped table-bordered');
+
+  $(".select-tags").select2({
+          tags: true
+        });
+</script>
+</footer>
+</html>

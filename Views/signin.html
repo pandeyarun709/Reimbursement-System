@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="http://blog.quikr.com/wp-content/uploads/2015/09/Favicon.ico" > 
+    <link rel="stylesheet" 
+       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+       crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/signin.css">
+    <title>Signin</title>
+</head>
+
+<body>
+    <div class="container">
+       <img id="log" src="https://teja10.kuikr.com/public/images/dist/PNG/Quikr-Logo.png" alt="login">
+       <div class="form-design"> 
+          <form action="/signin" method="POST">
+            <div class="form-group">
+                <label>Email : </label>
+                <input class="form-control" type="text" name="email" placeholder="xyz@gmial.com" required>
+            </div>
+
+            <div class="form-group">
+               <label>Password : </label> 
+              <input class="form-control" type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="form-group">
+                <label>User name : </label>
+                <input class="form-control" type="number" name="empName" placeholder="ID" required>
+            </div>
+
+            <div class="form-group">
+                <label>Employee Id : </label>
+                <input class="form-control" type="number" name="empId" placeholder="ID" required>
+            </div>
+
+            <div class="form-group">
+               <label>Contact number :</label>
+               <input class="form-control" type="number" name="contactNo" placeholder="xxxxxx8967" required>
+            </div>
+
+            <div class="form-group">
+                <label>Your Manager Id :</label>
+                <input class="form-control" type="text" name="managerId" placeholder="Manager Id" required>
+            </div>
+
+            <div class="form-group">
+               <label>Designation :</label> 
+               <input class="form-control" type="password" name="password" placeholder="Designation" required>
+            </div>
+
+             <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+             </div>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.container {
+    margin-top : 2px;
+}
+.form-design {
+    width:30%; 
+    margin: 15px auto;
+}
+#log {
+    width: 33%;
+    height: 5%;
+    margin-left: 32%;
+    margin-bottom: 0; 
+
+}
+
+label { 
+    display : inline;
+}
+.form-group {
+   margin-bottom: 10px;
+}
