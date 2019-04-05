@@ -2,11 +2,11 @@
     margin-top : 2px;
 }
 .form-design {
-    width:30%; 
+    width:40%; 
     margin: 15px auto;
 }
 #log {
-    width: 33%;
+    width: 30%;
     height: 5%;
     margin-left: 32%;
     margin-bottom: 0; 
@@ -18,4 +18,8 @@ label {
 }
 .form-group {
    margin-bottom: 10px;
+}
+
+.jumbotron {
+    padding-top: 2px;
 }

@@ -1,8 +1,8 @@
 .container {
-    margin-top : 7%;
+    margin-top : 5%;
 }
 .form-design {
-    width:30%; 
+    width:50%; 
     margin: 26px auto;
 }
 img {
@@ -10,4 +10,9 @@ img {
     height: 20%;
     margin-bottom: 20px;
 
+}
+.jumbotron {
+  
+    margin: auto;
+    width: 80%;
 }
