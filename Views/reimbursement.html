@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Quikr Logo -->
+  <link rel="icon" href="http://blog.quikr.com/wp-content/uploads/2015/09/Favicon.ico" > 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" 
+       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+       crossorigin="anonymous">
+
+       <!-- fontawesome  -->
+       <link rel="stylesheet" 
+         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+         crossorigin="anonymous"> 
+     <!-- Css File -->      
+    <link rel="stylesheet" href="../assets/reimbursement.css">
+  <title>Reimbusments</title>
+</head>
+<body>
+  <!-- header -->
+ <header>
+<nav class="my-nav navbar navbar-expand-lg">
+  <div class="container">
+      <a class="navbar-brand" href="#">Quikr Taskrrr</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Reimbusments<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Manager View</a>
+            </li>
+          </ul>
+        </div>
+  </div>       
+</nav>
+</header> 
+
+<!-- Section -->
+<section class="container">
+
+<div class="jumbotron">
+  <div class="page-header">
+       <h3>Add your tasks</h3>
+       <p class="well well-sm">Add your weekly tasks here. At end of apprisal cycle publisg the major tasks, so that your coworkers can give feedback about your performance. It will be easy to fillup your performance evaluation form this way.</p> 
+   </div>
+   <form class="publish-form">
+     <!-- Table -->
+    <table cellpadding="0" cellspacing="0" border="0" class="table display" id="example" width="100%">
+      <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Travle Expense</th>
+            <th>Telephone Expense</th>
+            <th>Bussiness Meal</th>
+            <th>Hotel Stay</th>
+            <th>Description</th>
+            <th>Total</th>
+            <th>Status</th>
+         </tr>
+      </thead>
+       <tbody>
+         <tr>
+          <td class="clearfix">
+                <input type="checkbox" name="task" id="task-1" value="task-1">
+                <a data-toggle="modal" data-target="#myModal" class="btn btn-link btn-xs">
+                  <i class="far fa-edit"></i> Edit
+                </a>
+           </td>
+           <td>Expense related bussiness meeting at Mumbai</td>
+            <td>1000</td>
+            <td>50</td>
+            <td>5000</td>
+            <td>10000</td>
+            <td>Bussiness Meeting at mumbai</td>
+            <td>16050</td>
+            <td>Pending</td>
+          </tr>
+      </tbody>
+  </table>
+  <button id="publish" name="publish" class="btn btn-danger">Publish</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Expense</button>
+  </form>  
+</div>
+
+<!-- Modal Form -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+  <!-- Modal content-->
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Your Expense</h4>
+      </div>
+
+    <div class="modal-body">
+    <form class="form-horizontal">
+      <fieldset>
+  
+    <!-- Title -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="title">Title</label>  
+        <div class="col-md-5">
+        <input id="title" name="title" type="text" placeholder="Describe the task" class="form-control input-md" required="">
+       </div>
+      </div>
+
+    <!-- Travel Expense -->
+      <div class="form-group">
+         <label class="col-md-4 control-label" for="jira">Travel Expense</label>
+         <div class="col-md-5">
+           <input id="jira" name="jira" class="form-control" placeholder="QKR-123" type="text">
+         </div>
+      </div>
+    <!-- Telephone -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="jira">Telephone Expense</label>
+        <div class="col-md-5">
+          <input id="jira" name="jira" class="form-control" placeholder="QKR-123" type="text">
+        </div>
+     </div>
+    <!-- Bussiness Meal -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="jira">Bussiness Meal</label>
+        <div class="col-md-5">
+          <input id="jira" name="jira" class="form-control" placeholder="QKR-123" type="text">
+        </div>
+     </div>           
+    <!-- Hotel Stay -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="jira">Hotel Stay</label>
+        <div class="col-md-5">
+          <input id="jira" name="jira" class="form-control" placeholder="QKR-123" type="text">
+        </div>
+     </div>  
+    <!-- Description -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="description">Description</label>
+        <div class="col-md-5">                     
+          <textarea class="form-control" id="description" name="description">Description</textarea>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-4">
+          <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  
+    </fieldset>
+  </form>
+  </div>
+
+   <!-- Modal close Button -->  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+  
+
+</section>
+
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

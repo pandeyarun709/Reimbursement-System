@@ -16,7 +16,11 @@
 	color: white;
 }
 
-.navbar .navbar-nav li a{
+.navbar li a {
 	color: white;
 }
 
+.navbar-toggler button span {
+    color: white;
+
+}
